@@ -14,10 +14,22 @@ body {
   font-family: sans-serif;
   color: white;
 }
-.location {
+.location, .temperature {
   height: 30vh;
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.degree-section span {
+  margin: 10px;
+  font-size: 30px;
+}
+.degree-section h2 {
+  font-size: 40px;
 }
