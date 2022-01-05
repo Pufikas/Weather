@@ -25,7 +25,8 @@ window.addEventListener('load', ()=> {
         console.log(data)
         // set dom ele from api
         temperatureDegree.textContent = temp;
-        temperatureDescription.textContent = feels_like
+        // temperatureDescription.textContent = feels_like
+        locationTimezone.textContent = data.name;
       })
       console.log()
 
