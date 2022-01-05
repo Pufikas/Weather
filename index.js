@@ -2,7 +2,7 @@ window.addEventListener('load', ()=> {
   let long
   let lat
   let temperatureDescription = document.querySelector(".temperature-description")
-  let temperatureDegree = document.querySelector(".temp-degree")
+  let temperatureDegree = document.querySelector(".temperature-degree")
   let locationTimezone = document.querySelector(".location-timezone")
 
 
@@ -21,10 +21,11 @@ window.addEventListener('load', ()=> {
         return response.json()
       })
       .then(data => {
-        const { temperature, weather } = data.main
+        const { temp, feels_like } = data.main
         console.log(data)
         // set dom ele from api
-        temperatureDegree.textContent = temperature
+        temperatureDegree.textContent = temp;
+        temperatureDescription.textContent = feels_like
       })
       console.log()
 
