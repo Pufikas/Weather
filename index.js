@@ -5,6 +5,10 @@ window.addEventListener('load', ()=> {
   let temperatureDegree = document.querySelector(".temperature-degree")
   let locationTimezone = document.querySelector(".location-timezone")
 
+// links https://openweathermap.org/current
+// https://cors-anywhere.herokuapp.com/corsdemo
+
+
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(position =>{ 
@@ -21,12 +25,13 @@ window.addEventListener('load', ()=> {
         return response.json()
       })
       .then(data => {
-        const { temp, feels_like } = data.main
+        const { temp } = data.main
+        const { description } = data.weather
         console.log(data)
         // set dom ele from api
         temperatureDegree.textContent = temp;
-        // temperatureDescription.textContent = feels_like
-        locationTimezone.textContent = data.name;
+        temperatureDescription.innerHTML = description
+        textContent = data.name;
       })
       console.log()
 
