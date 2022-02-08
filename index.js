@@ -30,7 +30,7 @@ window.addEventListener('load', ()=> {
         console.log(data)
         // set dom ele from api
         temperatureDegree.textContent = temp;
-        temperatureDescription.innerHTML = description
+        temperatureDescription.textContent = description
         textContent = data.name;
       })
       console.log()
