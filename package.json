@@ -1,0 +1,22 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Shows weather in your current location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pufikas/Weather.git"
+  },
+  "author": "Pufikas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pufikas/Weather/issues"
+  },
+  "homepage": "https://github.com/Pufikas/Weather#readme",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  }
+}

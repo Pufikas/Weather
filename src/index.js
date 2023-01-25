@@ -5,18 +5,15 @@ window.addEventListener('load', ()=> {
   let temperatureDegree = document.querySelector(".temperature-degree")
   let locationTimezone = document.querySelector(".location-timezone")
 
-// links https://openweathermap.org/current
-// https://cors-anywhere.herokuapp.com/corsdemo
-
-
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(position =>{ 
       long = position.coords.longitude
       lat = position.coords.latitude  
 
-      const APIkey = '6676c4c24ec54d80090a4fa61664238a'
-      const proxy = 'https://cors-anywhere.herokuapp.com/'
+      const APIkey = require(["../key"])
+      console.log(APIkey)
+      const proxy = "https://cors-anywhere.herokuapp.com/"
       const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIkey}&units=metric
       `
       
@@ -36,7 +33,7 @@ window.addEventListener('load', ()=> {
       console.log()
 
       console.log(position)})
-  }else{
+  } else {
     h1.textContent = "Cannot find the location"
   }
 })
